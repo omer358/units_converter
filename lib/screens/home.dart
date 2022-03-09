@@ -20,11 +20,13 @@ class Home extends StatelessWidget {
           crossAxisCount: 3,
           // Generate 100 widgets that display their index in the List.
           children: [
-            unitsWidgets("Time", Icons.timer, () {}),
-            unitsWidgets("Mass", Icons.ac_unit_rounded, () {}),
+            unitsWidgets("Time", Icons.date_range, () {}),
+            unitsWidgets("Mass", Icons.balance_rounded, () {}),
+            unitsWidgets("Volume", Icons.water, () {}),
             unitsWidgets("Length", Icons.view_array_sharp, () {}),
-            unitsWidgets("Area", Icons.space_bar, () {}),
-            unitsWidgets("Temperature", Icons.fireplace_rounded, () {}),
+            unitsWidgets("Area", Icons.area_chart, () {}),
+            unitsWidgets("Speed", Icons.speed, () {}),
+            unitsWidgets("Temperature", Icons.thermostat_rounded, () {}),
             unitsWidgets(
                 "Electricity", Icons.electrical_services_rounded, () {}),
             unitsWidgets("Distance", Icons.social_distance, () {}),
