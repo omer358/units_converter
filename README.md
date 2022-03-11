@@ -2,9 +2,18 @@
 
 A Flutter app helps Users to convert between the basic units of measurement.
 
-## The Current Supported Units:
+## The Current Added Units(Not supported yet!):
 - Time.
+- Mass.
+- Volume.
+- Length.
+- Area.
+- Speed.
+- Temperature.
+- Electrical Current.
+- Distance.
+- DTR(Data transfer Rate).
 
 ## Screenshots:
-![Home Screen](home.png "Home screen")
+![Home Screen](screenshots/home.gif "Home screen")
 
