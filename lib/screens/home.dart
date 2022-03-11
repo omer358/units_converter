@@ -10,28 +10,53 @@ class Home extends StatelessWidget {
         primarySwatch: Colors.blueGrey,
       ),
       home: Scaffold(
-        appBar: AppBar(
-          title: const Text("Units Converter"),
-        ),
-        body: GridView.count(
-          shrinkWrap: true,
-          // Create a grid with 2 columns. If you change the scrollDirection to
-          // horizontal, this produces 2 rows.
-          crossAxisCount: 3,
-          // Generate 100 widgets that display their index in the List.
-          children: [
-            unitsWidgets("Time", Icons.date_range, () {}),
-            unitsWidgets("Mass", Icons.balance_rounded, () {}),
-            unitsWidgets("Volume", Icons.water, () {}),
-            unitsWidgets("Length", Icons.view_array_sharp, () {}),
-            unitsWidgets("Area", Icons.area_chart, () {}),
-            unitsWidgets("Speed", Icons.speed, () {}),
-            unitsWidgets("Temperature", Icons.thermostat_rounded, () {}),
-            unitsWidgets(
-                "Electricity", Icons.electrical_services_rounded, () {}),
-            unitsWidgets("Distance", Icons.social_distance, () {}),
-            unitsWidgets("DTR", Icons.wifi_protected_setup_outlined, () {}),
-          ],
+        body: DefaultTabController(
+          length: 2,
+          child: NestedScrollView(
+            headerSliverBuilder:
+                (BuildContext context, bool innerBoxIsScrolled) {
+              return <Widget>[
+                SliverAppBar(
+                  expandedHeight: 200.0,
+                  floating: true,
+                  pinned: true,
+                  flexibleSpace: FlexibleSpaceBar(
+                      centerTitle: false,
+                      title: const Text("Basic Units",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20.0,
+                          )),
+                      background: Image.asset(
+                        'images/units.jpg',
+                        fit: BoxFit.cover,
+                      )),
+                ),
+              ];
+            },
+            body: Center(
+              child: GridView.count(
+                shrinkWrap: true,
+                // Create a grid with 2 columns. If you change the scrollDirection to
+                // horizontal, this produces 2 rows.
+                crossAxisCount: 3,
+                // Generate 100 widgets that display their index in the List.
+                children: [
+                  unitsWidgets("Time", Icons.date_range, () {}),
+                  unitsWidgets("Mass", Icons.balance_rounded, () {}),
+                  unitsWidgets("Volume", Icons.water_drop, () {}),
+                  unitsWidgets("Length", Icons.view_array_sharp, () {}),
+                  unitsWidgets("Area", Icons.area_chart, () {}),
+                  unitsWidgets("Speed", Icons.speed, () {}),
+                  unitsWidgets("Temperature", Icons.thermostat_rounded, () {}),
+                  unitsWidgets("Electricity", Icons.electrical_services, () {}),
+                  unitsWidgets("Distance", Icons.social_distance, () {}),
+                  unitsWidgets(
+                      "DTR", Icons.wifi_protected_setup_outlined, () {}),
+                ],
+              ),
+            ),
+          ),
         ),
       ),
     );
@@ -39,7 +64,7 @@ class Home extends StatelessWidget {
 
   Container unitsWidgets(label, icon, onPressed) {
     return Container(
-        margin: const EdgeInsets.fromLTRB(8, 8, 8, 8),
+        margin: const EdgeInsets.fromLTRB(8, 0, 8, 8),
         child: TextButton(
           onPressed: onPressed,
           child: Column(
