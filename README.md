@@ -15,5 +15,5 @@ A Flutter app helps Users to convert between the basic units of measurement.
 - DTR(Data transfer Rate).
 
 ## Screenshots:
-![Home Screen](screenshots/home.gif "Home screen")
+<img src="screenshots/home.gif" width="300" height="550">
 
