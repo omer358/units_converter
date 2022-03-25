@@ -9,7 +9,7 @@ void main() {
       theme: ThemeData(
         primarySwatch: Colors.blueGrey,
       ),
-      home: const Home(),
+      home: Home(),
     ),
   );
 }
