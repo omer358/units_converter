@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'screens/home.dart';
+import 'package:units_converter/screens/splash_screen.dart';
 
 void main() {
   runApp(
@@ -9,7 +8,7 @@ void main() {
       theme: ThemeData(
         primarySwatch: Colors.blueGrey,
       ),
-      home: Home(),
+      home: const Splash(),
     ),
   );
 }
